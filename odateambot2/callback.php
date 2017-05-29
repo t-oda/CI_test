@@ -12,7 +12,7 @@ $replyToken = $event->{"replyToken"};
 
 $post = [
     "replyToken" => $replyToken,
-    "messages" => [
+    "message" => [
                     "type" => "text",
                     "text" => $text]
                   ];
