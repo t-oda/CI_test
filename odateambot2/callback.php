@@ -4,7 +4,7 @@ $token = 'fUXdh15N23KWU7OYOQ3v2w9d6hEVNlD0/zkz3u2855Xu4tmd/ULYXtXaaTi5SOqQK1yfhL
 
 //callback確認
 $obj = json_decode(file_get_contents('php://input'));
-
+error_log($obj);
 //textとreplyToken取得
 $event = $obj->{"events"}[0];
 $text = $event->{"message"}->{"text"};
@@ -16,6 +16,7 @@ $post = [
                     "type" => "text",
                     "text" => $text]
                   ];
+error_log(json_encode($post));
 
 $ch = curl_init("https://api.line.me/v2/bot/message/reply");
 curl_setopt($ch, CURLOPT_POST, true);
@@ -26,4 +27,6 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
     'Content-Type: application/json; charser=UTF-8',
     'Authorization: Bearer ' . $token
     ));
-?>
+$result = curl_exec($ch);
+error_log($result);
+curl_close($ch);
