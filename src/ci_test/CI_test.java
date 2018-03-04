@@ -6,17 +6,18 @@
 package ci_test;
 
 /**
- *
+ * CIテストのためのテストクラス
  * @author odatoru
  */
 public class CI_test {
 
     /**
+     * Hello Worldを出力するメソッド
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
         System.out.println("Hello World!");
     }
-    
+
 }

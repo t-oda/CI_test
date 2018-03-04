@@ -3,6 +3,16 @@
   <groupId>CI_test</groupId>
   <artifactId>CI_test</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+
+  <!-- to use google cloud platform -->
+  <dependencies>
+  <dependency>
+    <groupId>com.google.cloud</groupId>
+    <artifactId>google-cloud-bigquery</artifactId>
+    <version>0.30.0-beta</version>
+  </dependency>
+  </dependencies>
+
   <build>
     <sourceDirectory>src</sourceDirectory>
     <plugins>
